@@ -1,0 +1,13 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: dm-user-provider
+eureka:
+  instance:
+    perfer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-regitry: true
+    service-url:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/

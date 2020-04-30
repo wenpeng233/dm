@@ -1,0 +1,4 @@
+server.port=7776
+eureka.boot.register-with-eureka=false
+eureka.boot.fetch-registry=false
+eureka.server.wait-time-in-ms-when-sync-empty=5

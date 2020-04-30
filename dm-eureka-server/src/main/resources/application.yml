@@ -1,0 +1,16 @@
+server:
+  port: 7776
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    wait-time-in-ms-when-sync-empty: 5
+
+# 安全认证
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin123
