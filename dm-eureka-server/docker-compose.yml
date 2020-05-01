@@ -1,0 +1,7 @@
+version: '2'
+services:
+  discovery-eureka1:
+    build: .
+    mem_limit: 512M
+    ports: 
+      - "7776:7776"
