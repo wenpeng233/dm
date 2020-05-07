@@ -1,0 +1,10 @@
+server:
+  port: 11000
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 10001
+    username: guest
+    password: guest
+    publisher-confirms: true
+    virtual-host: /

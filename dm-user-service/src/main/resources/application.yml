@@ -1,0 +1,21 @@
+server:
+  port: 10022
+
+spring:
+  application:
+    name: dm-user-service
+
+eureka:
+  instance:
+    perfer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-regitry: true
+
+    service-url:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/
+
+# 开启服务降级
+feign:
+  hystrix:
+    enabled: true

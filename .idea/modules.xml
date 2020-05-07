@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/dm.iml" filepath="$PROJECT_DIR$/.idea/dm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dm-order-service/dm-order-service.iml" filepath="$PROJECT_DIR$/dm-order-service/dm-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dm-seat-schedule-service/dm-seat-schedule-service.iml" filepath="$PROJECT_DIR$/dm-seat-schedule-service/dm-seat-schedule-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dm-user-service/dm-user-service.iml" filepath="$PROJECT_DIR$/dm-user-service/dm-user-service.iml" />
+    </modules>
+  </component>
+</project>
