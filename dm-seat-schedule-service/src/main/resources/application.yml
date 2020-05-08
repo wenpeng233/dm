@@ -1,0 +1,25 @@
+server:
+  port: 10003
+spring:
+  application:
+    name: dm-seat-schedule-service
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/redis-lock-test
+    username: root
+    password: changeme@123
+
+eureka:
+  instance:
+    perfer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-regitry: true
+
+    service-url:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/
+
+  redis:
+    redisson:
+      config: classpath:redisson.yml

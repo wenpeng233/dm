@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/dm-order-service/dm-seat-schedule-service/pom.xml" />
         <option value="$PROJECT_DIR$/dm-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/dm-seat-schedule-service/pom.xml" />
+        <option value="$PROJECT_DIR$/dm-eureka-server/pom.xml" />
       </list>
     </option>
   </component>

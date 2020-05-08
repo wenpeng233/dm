@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/dm-seat-schedule-service/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dm-seat-schedule-service/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/dm-seat-schedule-service/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dm-eureka-server/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

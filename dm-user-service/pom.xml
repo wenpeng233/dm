@@ -35,9 +35,28 @@
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
 
+        <!--   rabbitmq     -->
         <dependency>
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-amqp</artifactId>
+        </dependency>
+
+        <!--    mysql数据库    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+
+        <!--    使用redisson框架实现redis分布式锁    -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.3.2</version>
         </dependency>
     </dependencies>
 

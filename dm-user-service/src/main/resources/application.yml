@@ -1,9 +1,14 @@
 server:
-  port: 10022
-
+  port: 10004
 spring:
   application:
     name: dm-user-service
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/redis-lock-test
+    username: root
+    password: changeme@123
 
 eureka:
   instance:
@@ -15,7 +20,6 @@ eureka:
     service-url:
       defaultZone: http://admin:admin123@localhost:7776/eureka/
 
-# 开启服务降级
-feign:
-  hystrix:
-    enabled: true
+  redis:
+    redisson:
+      config: classpath:redisson.yml
