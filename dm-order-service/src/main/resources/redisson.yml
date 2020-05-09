@@ -1,4 +1,4 @@
 spring:
   redis:
     cluster:
-      nodes: 127.0.0.1:6379
+      nodes: 192.168.137.138:6379

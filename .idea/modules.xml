@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dm-config-server/dm-config-server.iml" filepath="$PROJECT_DIR$/dm-config-server/dm-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/dm-eureka-server/dm-eureka-server.iml" filepath="$PROJECT_DIR$/dm-eureka-server/dm-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dm-gateway-zuul/dm-gateway-zuul.iml" filepath="$PROJECT_DIR$/dm-gateway-zuul/dm-gateway-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/dm-order-service/dm-order-service.iml" filepath="$PROJECT_DIR$/dm-order-service/dm-order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/dm-seat-schedule-service/dm-seat-schedule-service.iml" filepath="$PROJECT_DIR$/dm-seat-schedule-service/dm-seat-schedule-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/dm-user-consumer/dm-user-consumer.iml" filepath="$PROJECT_DIR$/dm-user-consumer/dm-user-consumer.iml" />

@@ -6,9 +6,24 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/redis-lock-test
+    url: jdbc:mysql://192.168.137.138:3306/redis-lock-test
     username: root
     password: changeme@123
+
+  redis:
+    cluster:
+      nodes: 192.168.137.138:6379
+    password:
+
+
+# 开启服务降级
+feign:
+  hystrix:
+    enabled: true
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
 
 eureka:
   instance:
@@ -20,6 +35,4 @@ eureka:
     service-url:
       defaultZone: http://admin:admin123@localhost:7776/eureka/
 
-  redis:
-    redisson:
-      config: classpath:redisson.yml
+

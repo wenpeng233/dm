@@ -1,0 +1,20 @@
+server:
+  port: 7900
+
+spring:
+  application:
+    name: dm-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wenpeng233/dm.git
+          username: 907177955@qq.com
+          password: wenp1893
+          search-paths: config-repo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/

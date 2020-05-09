@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: dm-gateway-zuul
+
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:7900/
+      profile: dev
+
+eureka:
+  client:
+    service-uri:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/

@@ -8,7 +8,14 @@
         <option value="$PROJECT_DIR$/dm-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/dm-seat-schedule-service/pom.xml" />
         <option value="$PROJECT_DIR$/dm-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/dm-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/dm-gateway-zuul/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/dm-order-service/dm-config-server/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

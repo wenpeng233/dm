@@ -1,4 +1,2 @@
-spring:
-  redis:
-    cluster:
-      nodes: 127.0.0.1:6379
+redisson:
+  address: redis://192.168.137.138:6379

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: dm-gateway-zuul
+
+server:
+  port: 7600
+
+zuul:
+  routes:
+    dm-user-service: /user/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/
