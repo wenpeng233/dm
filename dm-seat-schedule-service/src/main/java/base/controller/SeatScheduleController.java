@@ -2,42 +2,34 @@ package base.controller;
 
 import base.entity.User;
 import base.feignclient.UserServiceFeignClient;
+import base.util.RedisUtils;
+import org.apache.commons.lang.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
-import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.File;
-import java.io.IOException;
-
-
 @RestController
 public class SeatScheduleController {
 
-    @Bean
-    public static RedissonClient redissonClient(){
-        Config config = new Config();
-        config.useSingleServer()
-                .setAddress("redis://192.168.137.138:6379");
-        RedissonClient redisson = Redisson.create(config);
-        return redisson;
-    }
+//    @Bean
+//    public static RedissonClient redissonClient(){
+//        Config config = new Config();
+//        config.useSingleServer()
+//                .setAddress("redis://192.168.137.138:6379");
+//        RedissonClient redisson = Redisson.create(config);
+//        return redisson;
+//    }
+
 
     @Autowired
-    private RedissonClient redisson;
+    private Redisson redisson;
 
     @Autowired
     private UserServiceFeignClient userServiceFeignClient;
-
-    public SeatScheduleController() throws IOException {
-    }
-
 
 
     @RequestMapping(value = "/bookSeat", method = RequestMethod.GET)
@@ -46,6 +38,7 @@ public class SeatScheduleController {
 
         if(lock.isLocked()){
             System.out.println("已经上锁了：" + lock.getName());
+            return "当前位置已被预占。";
         }
 
         lock.lock();
@@ -56,6 +49,14 @@ public class SeatScheduleController {
             Thread.sleep(300);
 
             User userObj = userServiceFeignClient.getUser(userId);
+
+            String newUserName = "new name";
+            String oldUserName = RedisUtils.getInstance().get(userId).toString();
+            if (StringUtils.isEmpty(oldUserName)){
+                RedisUtils.getInstance().set(userId, userObj.getUserName());
+            } else if (!StringUtils.equals(newUserName, oldUserName)){
+                RedisUtils.getInstance().update(userId, userId);
+            }
 
             if (userObj == null) {
                 throw new Exception("user is not exist.");

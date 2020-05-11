@@ -3,17 +3,14 @@ server:
 spring:
   application:
     name: dm-seat-schedule-service
-
   datasource:
     # mysql 6及以上可以用以下的驱动包，同时maven中jdbc的依赖版本也要对应    #  通过useSSL=false参数避免出现jdbc连接数据库时报的协议错误
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.137.138:3306/redis-lock-test?useUnicode=true&zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=utf8&useSSL=false
     username: root
     password: changeme@123
-
   redis:
-    cluster:
-      nodes: redis://192.168.137.138:6379
+    host: redis://192.168.137.138:6379
     password:
 
 

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@FeignClient(name = "dm-user-service"/* , fallback = UserServiceFallback.class */)
+@FeignClient(name = "dm-user-service", fallback = UserServiceFallback.class)
 public interface UserServiceFeignClient {
 
     @RequestMapping(value = "/getUserById", method = RequestMethod.GET)
