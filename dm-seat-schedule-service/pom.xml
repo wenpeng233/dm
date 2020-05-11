@@ -35,11 +35,11 @@
 <!--            <artifactId>feign-httpclient</artifactId>-->
 <!--            <version>9.4.0</version>-->
 <!--        </dependency>-->
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-okhttp</artifactId>
-            <version>10.2.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.github.openfeign</groupId>-->
+<!--            <artifactId>feign-okhttp</artifactId>-->
+<!--            <version>10.2.0</version>-->
+<!--        </dependency>-->
 
 
         <dependency>
@@ -60,6 +60,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
         </dependency>
 
 

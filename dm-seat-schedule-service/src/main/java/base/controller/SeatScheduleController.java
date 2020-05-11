@@ -51,9 +51,9 @@ public class SeatScheduleController {
         lock.lock();
         try {
             System.out.println("成功预定座位：" + seatId);
-            Thread.sleep(1000);
+            Thread.sleep(300);
             System.out.println("成功创建订单：" + seatId + userId);
-            Thread.sleep(1000);
+            Thread.sleep(300);
 
             User userObj = userServiceFeignClient.getUser(userId);
 
@@ -67,7 +67,10 @@ public class SeatScheduleController {
 
         } catch (Exception e){
             System.out.println("roll back");
-            lock.unlock();
+        } finally {
+            if (lock != null){
+                lock.unlock();
+            }
         }
         return seatId;
     }

@@ -5,8 +5,8 @@ spring:
     name: dm-user-service
 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.137.138:3306/redis-lock-test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.137.138:3306/redis-lock-test?useUnicode=true&zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=utf8&useSSL=false
     username: root
     password: changeme@123
 

@@ -5,11 +5,12 @@ import base.feignclient.fallback.UserServiceFallback;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@FeignClient(name = "dm-user-service", fallback = UserServiceFallback.class)
+@FeignClient(name = "dm-user-service"/* , fallback = UserServiceFallback.class */)
 public interface UserServiceFeignClient {
 
     @RequestMapping(value = "/getUserById", method = RequestMethod.GET)
-    public @ResponseBody User getUser(String userId);
+    public User getUser(@RequestParam("userId") String userId);
 }
