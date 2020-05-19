@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: blog-server
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.137.138:3306/redis-lock-test?useUnicode=true&zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=utf8&useSSL=false
+    username: root
+    password: changeme@123
+
+
+server:
+  port: 7700
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:7776/eureka/
+
+
+# 设置zuul请求的超时时间，默认1s，将default缓存特定的服务名称就是对特定的服务设置特定的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000

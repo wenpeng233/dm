@@ -6,14 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dm-gateway-zuul" />
-        <module name="dm-seat-schedule-service" />
         <module name="dm-config-server" />
+        <module name="blog-server" />
+        <module name="dm-seat-schedule-service" />
         <module name="dm-user-service" />
-        <module name="dm-eureka-server" />
+        <module name="dm-gateway-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="blog-server" target="1.6" />
       <module name="dm-config-server" target="1.6" />
       <module name="dm-eureka-server" target="1.8" />
       <module name="dm-gateway-zuul" target="1.8" />

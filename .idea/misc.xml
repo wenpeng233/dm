@@ -10,10 +10,12 @@
         <option value="$PROJECT_DIR$/dm-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/dm-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/dm-gateway-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/blog-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/dm-eureka-server/blog-server/pom.xml" />
         <option value="$PROJECT_DIR$/dm-order-service/dm-config-server/pom.xml" />
       </set>
     </option>
