@@ -16,7 +16,7 @@
     <bytecodeTargetLevel>
       <module name="blog-server" target="1.6" />
       <module name="dm-config-server" target="1.6" />
-      <module name="dm-eureka-server" target="1.8" />
+      <module name="dm-eureka-server" target="1.6" />
       <module name="dm-gateway-zuul" target="1.8" />
       <module name="dm-order-service" target="1.6" />
       <module name="dm-seat-schedule-service" target="1.6" />
