@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>Document</title>
+
+    <style>
+        #blogTable{
+            width: 50%;
+            margin: 0 25% 0 25%;
+        }
+
+
+        .blogCard{
+
+            border-bottom-width: 0.45em;
+            border-right-width: 0.3em;
+            border-color: rgb(180, 180, 180);
+            background-color: rgb(243, 247, 233);
+
+            border-bottom-style:solid;
+            border-right-style: solid;
+            
+            margin-top: 10px;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .blogTitle{
+            border-bottom-width: 0.01em;
+            text-align: center;
+        }
+
+        .blogMsg{
+            margin: 10px 0 10px 0;
+        }
+
+        td{
+            padding: 0 20px 0 2px;
+        }
+
+        .blogPreview{
+            margin: 10px 0 10px 0;
+        }
+
+        #previous{
+            margin: 10px 0 10px 0;
+        }
+
+        #next{
+            margin: 10px 0 10px 0;
+        }
+
+        .buttonDiv{
+            border: 1px;
+            width: 80%;
+            margin: 0 10% 0 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blogTable" >
+
+        <div class="blogCard"  v-for="blog in blogs">
+
+            <div>
+                <div class="blogTitle">
+                    <tr colspan="4">
+                        <td width="100%">{{ blog.title }}</td>
+                    </tr>
+                </div>
+    
+                <div class="blogMsg">
+                    <table>
+                        <tr>
+                            <td>字数：{{ blog.wordCount }}</td>
+                            <td>更新时间：{{ blog.updateTime }}</td>
+                            <td>浏览量：{{ blog.watchedPeople }}</td>
+                            <td>作者：{{ blog.writer }}</td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+                <div class="blogPreview">
+                    <span width="100%">  {{ blog.contentPreview }}</span>
+                </div>
+                
+                
+            </div>
+    
+        </div>
+
+        <div class="buttonDiv">
+            <button id="previous">上一页</button>
+            <button id="next">下一页</button>
+        </div>
+    </div>
+    
+
+    <script>
+        new Vue({
+            el: "#blogTable",
+            data: {
+                blogs: [
+                    {
+                        title: "vue教程",
+                        wordCount: 2350,
+                        updateTime: "2020-3-21",
+                        watchedPeople: 5334,
+                        writer: "Turing",
+                        contentPreview: "Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。Vue 只关注视图层， 采用自底向上增量开发的设计。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。Vue 学习起来非常简单，本教程基于 Vue 2.1.8 版本测试。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople:  ,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople: 103439,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople: 103439,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople: 103439,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople: 103439,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople: 103439,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    },
+                    {
+                        title: "html教程",
+                        wordCount: 12350,
+                        updateTime: "2020-2-20",
+                        watchedPeople: 103439,
+                        writer: "Turing",
+                        contentPreview: "HTML是现在世界通用的超文本标记语言，通过它，可以实现图片、链接、音乐以及程序等等多种元素。现如今，HTML已经是程序员必须掌握的一项基本功。"
+                    }
+                ]
+            }
+        })
+     
+    </script>
+</body>
+
+</html>
