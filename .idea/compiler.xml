@@ -10,6 +10,8 @@
         <module name="blog-server" />
         <module name="dm-seat-schedule-service" />
         <module name="dm-user-service" />
+        <module name="org-demo-pom" />
+        <module name="dm-eureka-server" />
         <module name="dm-gateway-zuul" />
       </profile>
     </annotationProcessing>
@@ -18,9 +20,10 @@
       <module name="dm-config-server" target="1.6" />
       <module name="dm-eureka-server" target="1.6" />
       <module name="dm-gateway-zuul" target="1.8" />
-      <module name="dm-order-service" target="1.6" />
-      <module name="dm-seat-schedule-service" target="1.6" />
+      <module name="dm-order-service" target="1.5" />
+      <module name="dm-seat-schedule-service" target="1.5" />
       <module name="dm-user-service" target="1.6" />
+      <module name="org-demo-pom" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -54,6 +54,6 @@
                 <version>Dalston.SR4</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>e
+    </dependencyManagement>
 
 </project>
