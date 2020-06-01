@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@ComponentScan(basePackages = "boot")
+@ComponentScan(basePackages = "base")
+@MapperScan(basePackages = "base.dao.mapper")
 public class BlogServerApplication {
 
     public static void main(String[] args) {

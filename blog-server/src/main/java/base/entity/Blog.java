@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class Blog {
 
+    private int id;
     private String title;
     private int wordCount;
     private String updateTime;

@@ -3,18 +3,18 @@
 <mapper namespace="base.dao.mapper.BlogMapper">
 
 
-    <resultMap id="result" type="Blog">
-<!--        <id column="id" property="id" jdbcType="BIGINT"/>-->
+    <resultMap id="result" type="base.entity.Blog">
+        <id column="id" property="id" jdbcType="INT"/>
         <result column="title" property="title" jdbcType="VARCHAR"/>
-        <result column="wordCount" property="wordCount" jdbcType="TINYINT"/>
+        <result column="wordCount" property="wordCount" jdbcType="INT"/>
         <result column="updateTime" property="updateTime" jdbcType="VARCHAR"/>
-        <result column="watchedPeople" property="watchedPeople" jdbcType="TINYINT"/>
+        <result column="watchedPeople" property="watchedPeople" jdbcType="INT"/>
         <result column="writer" property="writer" jdbcType="VARCHAR"/>
         <result column="contentPreview" property="contentPreview" jdbcType="VARCHAR"/>
     </resultMap>
 
 
-<!--    &lt;!&ndash; 若不需要自动返回主键，将useGeneratedKeys="true" keyProperty="id"去掉即可(当然如果不需要自动返回主键，直接用注解即可) &ndash;&gt;
+<!--
     <insert id="insertUser" parameterType="User" useGeneratedKeys="false" keyProperty="id" >
         <![CDATA[
            INSERT INTO user
